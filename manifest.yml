@@ -1,0 +1,22 @@
+modules:
+  jira:projectSettingsPage:
+    - key: sirius-clone-forge-jira-cloud-hello-world-project-settings-page
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: sirius_clone_forge_jira_cloud
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs22.x
+  id: ari:cloud:ecosystem::app/50220076-a72f-401e-8430-2230779dc622
+permissions:
+  scopes:
+    - read:jira-work
+    - storage:app
