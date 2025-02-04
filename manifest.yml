@@ -17,6 +17,11 @@ app:
     name: nodejs22.x
   id: ari:cloud:ecosystem::app/50220076-a72f-401e-8430-2230779dc622
 permissions:
+  external:
+    fetch:
+      backend:
+        - jira-dev.tools.sap
   scopes:
     - read:jira-work
     - storage:app
+    - manage:jira-project
